@@ -1,0 +1,5 @@
+{
+  "INVALID_TYPE": "Invalid incident type: {type}",
+  "DESCRIPTION_REQUIRED_FOR_NON_FULL": "Description is required for incident types other than 'FULL'.",
+  "ALREADY_REPORTED": "An incident has already been reported for this container."
+}

@@ -1,0 +1,5 @@
+{
+  "EMAIL_IN_USE": "The email {email} is already in use.",
+  "USER_NOT_FOUND": "User with ID {id} not found.",
+  "OPERATOR_CREATED_SUCCESS": "Operator created successfully. A set password email has been sent."
+}

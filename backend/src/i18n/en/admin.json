@@ -1,0 +1,18 @@
+{
+  "REPORT_CONTAINER_STATUS_TITLE": "Container Status Report",
+  "REPORT_FILTERED_BY_TYPE": "Filtered by type: {type}",
+  "REPORT_ALL_TYPES": "All",
+  "REPORT_GENERATED_ON": "Generated on: {date} {time}",
+  "TABLE_HEADER_LOCATION": "Location",
+  "TABLE_HEADER_TYPE": "Type",
+  "TABLE_HEADER_CAPACITY": "Capacity (L)",
+  "TABLE_HEADER_FILL_LEVEL": "Fill Level (%)",
+  "TABLE_HEADER_STATUS": "Status",
+  "QR_PDF_CONTAINER_LABEL": "Container: {location}",
+  "QR_PDF_ID_LABEL": "ID: {id}",
+  "QR_PDF_TYPE_LABEL": "Type: {type}",
+  "QR_PDF_SCAN_TO_REPORT": "Scan to report incident",
+  "QR_PDF_URL_LABEL": "URL: {url}",
+  "QR_PDF_ERROR_GENERATING": "Error generating QR",
+  "QR_PDF_NO_CONTAINERS": "No containers to generate QR codes for."
+}

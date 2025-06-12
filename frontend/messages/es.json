@@ -1,0 +1,825 @@
+{
+  "RootLayout": {
+    "title": "Ciudad Sostenible",
+    "description": "Gestión eficiente de residuos."
+  },
+  "LocaleSwitcher": {
+    "label": "Seleccionar idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "ThemeToggle": {
+    "toggleTheme": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "types": {
+    "containerTypes": {
+      "GENERAL": "General",
+      "PLASTIC": "Plástico",
+      "PAPER": "Papel y Cartón",
+      "GLASS": "Vidrio",
+      "ORGANIC": "Orgánico",
+      "METAL": "Metal",
+      "ELECTRONICS": "Electrónicos",
+      "BATTERIES": "Pilas y Baterías",
+      "CLOTHING": "Ropa",
+      "OIL": "Aceite Usado",
+      "OTHERS": "Otros"
+    },
+    "containerStatuses": {
+      "OK": "OK",
+      "FULL": "Lleno",
+      "DAMAGED": "Dañado"
+    },
+    "userRoles": {
+      "Admin": "Administrador",
+      "Operator": "Operario",
+      "User": "Usuario"
+    }
+  },
+  "shared": {
+    "allTypes": "Todos los Tipos"
+  },
+  "HomePage": {
+    "campusNamePrefix": "CIUDAD",
+    "campusNameSuffixSustainable": "SOSTENIBLE",
+    "subtitle": "Gestiona y visualiza los contenedores de residuos.",
+    "tagline": "Reciclar no es solo inteligente, es la forma más educada de decirle al planeta: ",
+    "taglineHighlight": " gracias por todo 🌍"
+  },
+  "NotFoundPage": {
+    "metadata": {
+      "title": "Página No Encontrada - Ciudad Sostenible"
+    },
+    "content": {
+      "title": "Contenedor no encontrado",
+      "description": "Parece que este enlace fue RECICLADO o enviado por error a la papelera.",
+      "descriptionHighlight": "No te preocupes, no se ha generado ningún residuo electrónico.",
+      "goHomeButton": "Volver al Inicio",
+      "searchContainerButton": "Buscar un contenedor",
+      "tipOfTheDay": "Consejo del día: apaga tu router, recicla tus scripts y cuida el planeta 🌍."
+    }
+  },
+  "SearchPage": {
+    "metadata": {
+      "title": "Buscar Contenedores Cercanos",
+      "description": "Encuentra contenedores de residuos cerca de ti y filtra por tipo o estado."
+    },
+    "content": {
+      "title": "Buscar Contenedores",
+      "subtitle": "Encuentra los puntos de reciclaje y residuos más cercanos a tu ubicación."
+    }
+  },
+  "SearchClientPage": {
+    "loading": {
+      "mapResults": "Cargando mapa de resultados...",
+      "mapSelector": "Cargando selector de mapa..."
+    },
+    "filters": {
+      "title": "Filtros de Búsqueda",
+      "description": "Define tu ubicación, radio y criterios para encontrar contenedores cercanos.",
+      "searchCenterLabel": "Centro de Búsqueda (Selecciona en el mapa)",
+      "locatingButton": "Obteniendo...",
+      "useMyLocationButton": "Usar Mi Ubicación Actual",
+      "searchTermLabel": "Término de Búsqueda (Opcional)",
+      "searchTermPlaceholder": "Ej: Biblioteca, Polideportivo...",
+      "searchRadiusLabel": "Radio de Búsqueda: {radius} km",
+      "containerTypeLabel": "Tipo de Contenedor",
+      "anyType": "Cualquier tipo",
+      "searchTypePlaceholder": "Buscar tipo...",
+      "selectAll": "Sel. Todo",
+      "deselectAll": "Quitar Sel.",
+      "containerStatusLabel": "Estado del Contenedor",
+      "anyStatus": "Cualquier estado",
+      "searchStatusPlaceholder": "Buscar estado...",
+      "searchButton": "Buscar Contenedores"
+    },
+    "results": {
+      "errorTitle": "Error en la Búsqueda",
+      "titleFound": "{count, plural, one {1 Resultado de Búsqueda} other {# Resultados de Búsqueda}}",
+      "description": "Contenedores encontrados según tus criterios.",
+      "mapTitle": "Mapa de Resultados",
+      "listTitle": "Lista de Contenedores Encontrados",
+      "containerTypeLabel": "Tipo",
+      "containerStatusLabel": "Estado",
+      "statusN_A": "N/A",
+      "fillLevelLabel": "Llenado: {level}%",
+      "capacityLabel": "Capacidad: {capacity}L",
+      "distanceLabel": "Distancia: {distance} km",
+      "lastEmptiedLabel": "Últ. Vaciado: {date}",
+      "openInMapsAriaLabel": "Abrir en Google Maps",
+      "reportIncidentLink": "Reportar incidencia para este contenedor",
+      "noContainersFoundTitle": "No se encontraron contenedores",
+      "noContainersFoundSuggestion": "Intenta ampliar el radio de búsqueda o ajustar los filtros de tipo/estado."
+    },
+    "toast": {
+      "error": {
+        "geolocationNotSupported": "La geolocalización no es soportada por tu navegador.",
+        "geolocationPermissionDenied": "No se pudo obtener tu ubicación: Permiso denegado.",
+        "geolocationPositionUnavailable": "No se pudo obtener tu ubicación: Información no disponible.",
+        "geolocationTimeout": "No se pudo obtener tu ubicación: Tiempo de espera agotado.",
+        "geolocationGenericError": "No se pudo obtener tu ubicación.",
+        "selectLocationFirst": "Por favor, selecciona una ubicación en el mapa o usa tu ubicación actual para la búsqueda.",
+        "searchDefault": "Error al buscar contenedores."
+      },
+      "success": {
+        "locationObtained": "Ubicación actual obtenida. Ajusta el radio y busca.",
+        "foundContainers": "{count, plural, =0 {No se encontraron contenedores} one {# contenedor encontrado} other {# contenedores encontrados}}."
+      },
+      "info": {
+        "noContainersFoundFilters": "No se encontraron contenedores con los filtros aplicados."
+      }
+    }
+  },
+  "ReportIncidentPage": {
+    "metadata": {
+      "title": "Reportar Incidencia de Contenedor",
+      "description": "Ayúdanos a mantener nuestros contenedores en óptimas condiciones."
+    },
+    "content": {
+      "title": "Reportar Incidencia de Contenedor",
+      "subtitle": "Ayúdanos a mantener nuestros contenedores en óptimas condiciones.",
+      "anonymityNote": "Tu reporte es anónimo y nos ayudará a mejorar la gestión de residuos en tu ciudad.",
+      "thankYouNote": "Gracias por ayudar a mantener tu ciudad tan limpio como tu código 💚💻♻️",
+      "loadingForm": "Cargando formulario..."
+    }
+  },
+  "ReportIncidentFormCard": {
+    "title": "Detalles de la Incidencia",
+    "description": "Completa la información sobre la anomalía detectada.",
+    "affectedContainerLabel": "Contenedor Afectado",
+    "loadingContainersPlaceholder": "Cargando contenedores...",
+    "selectContainerPlaceholder": "Selecciona un contenedor",
+    "loadingItem": "Cargando...",
+    "noContainersAvailable": "No hay contenedores disponibles",
+    "incidentTypeLabel": "Tipo de incidencia",
+    "selectIncidentTypePlaceholder": "Selecciona tipo de incidencia",
+    "incidentTypes": {
+      "FULL": "Lleno",
+      "DAMAGED": "Dañado"
+    },
+    "incidentDescriptionLabel": "Descripción de la Incidencia (si aplica)",
+    "descriptionPlaceholder": "Ej: El contenedor está roto en la esquina superior, la tapa no cierra, no tiene código QR...",
+    "submittingButton": "Enviando Reporte...",
+    "submitButton": "Enviar Reporte",
+    "toast": {
+      "error": {
+        "fetchContainers": "No se pudieron cargar los contenedores para el reporte.",
+        "selectContainer": "Por favor, selecciona un contenedor.",
+        "selectIncidentType": "Por favor, selecciona un tipo de incidencia.",
+        "reportFailedDefault": "Error al reportar la incidencia."
+      },
+      "success": {
+        "reportSucceededTitle": "¡Incidencia reportada con éxito!",
+        "reportSucceededDescription": "Gracias por tu colaboración."
+      }
+    }
+  },
+  "LoginPage": {
+    "metadata": {
+      "title": "Iniciar Sesión - Ciudad Sostenible",
+      "description": "Accede a tu cuenta para gestionar los contenedores."
+    },
+    "content": {
+      "title": "Iniciar Sesión",
+      "subtitle": "Accede a tu cuenta para continuar con la experiencia.",
+      "footerNote": "🧠 Este formulario ha sido optimizado con lógica sostenible y buenas prácticas. ¡Cero emisiones de bugs! 🌿"
+    }
+  },
+  "LoginForm": {
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "******",
+    "loadingButton": "Cargando...",
+    "submitButton": "Entrar",
+    "noAccountPrompt": "¿Aún no tienes una cuenta?",
+    "createAccountLink": "Crear cuenta",
+    "forgotPasswordPrompt": "¿Has olvidado tu contraseña?",
+    "recoverPasswordLink": "Recuperar contraseña",
+    "toast": {
+      "success": {
+        "loggedIn": "¡Sesión iniciada correctamente!"
+      },
+      "error": {
+        "default": "Error al iniciar sesión. Verifica tus credenciales."
+      }
+    }
+  },
+  "RegisterPage": {
+    "metadata": {
+      "title": "Crear Cuenta - Ciudad Sostenible",
+      "description": "Regístrate para acceder a la gestión de contenedores."
+    },
+    "content": {
+      "title": "Crear Cuenta",
+      "subtitle": "¡Bienvenido! Completa el formulario para comenzar a disfrutar de nuestros servicios.",
+      "alreadyHaveAccountPrompt": "¿Ya tienes cuenta?",
+      "loginLink": "Inicia sesión aquí",
+      "footerNote": "♻️ Guardamos tus datos de forma segura... y reciclamos componentes con amor."
+    }
+  },
+  "RegisterForm": {
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre completo",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tucorreo@example.com",
+    "loadingButton": "Enviando...",
+    "submitButton": "Registrarme",
+    "toast": {
+      "success": {
+        "requestSent": "¡Solicitud de registro enviada!"
+      },
+      "error": {
+        "default": "Error al solicitar el registro. Inténtalo de nuevo."
+      }
+    },
+    "uiMessage": {
+      "success": {
+        "checkEmail": "✅ Revisa tu correo para completar el registro. El enlace expirará en 5 minutos."
+      }
+    }
+  },
+  "RecoverPasswordPage": {
+    "metadata": {
+      "title": "Recuperar Contraseña - Ciudad Sostenible",
+      "description": "Restablece tu contraseña para acceder a tu cuenta."
+    },
+    "content": {
+      "title": "Recuperar Contraseña",
+      "subtitle": "Introduce tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
+      "footerNote": "🌱 Prometemos generar un email con energía 100% renovable... y con código limpio. 💻♻️"
+    }
+  },
+  "RequestPasswordResetForm": {
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "loadingButton": "Enviando...",
+    "submitButton": "Enviar enlace de recuperación",
+    "toast": {
+      "success": {
+        "requestSent": "Solicitud enviada"
+      },
+      "error": {
+        "default": "Error al procesar la solicitud. Inténtalo de nuevo."
+      }
+    },
+    "uiMessage": {
+      "success": {
+        "checkEmail": "Si existe una cuenta con este correo, recibirás un enlace para restablecer tu contraseña en breve. El enlace expirará en 5 minutos."
+      }
+    }
+  },
+  "SetPasswordTokenPage": {
+    "pageTitle": "Establecer Contraseña - Ciudad Sostenible",
+    "verifyingToken": "Verificando token...",
+    "toast": {
+      "tokenNotFound": "Token no encontrado o inválido."
+    }
+  },
+  "SetPasswordForm": {
+    "title": "Establecer nueva contraseña",
+    "securityTip": "🔒 Recuerda: ¡No uses \"password123\"! (Tu abuela no debería adivinar tu clave 😉)",
+    "newPasswordLabel": "Nueva contraseña",
+    "confirmPasswordLabel": "Confirmar contraseña",
+    "passwordPlaceholder": "******",
+    "loadingButton": "Guardando...",
+    "submitButton": "Establecer contraseña y entrar",
+    "toast": {
+      "error": {
+        "passwordsDoNotMatch": "Las contraseñas no coinciden.",
+        "passwordTooShort": "La contraseña debe tener al menos {minLength} caracteres.",
+        "default": "Error al configurar la contraseña. El enlace podría haber expirado o ser inválido."
+      },
+      "success": {
+        "passwordSetAndLoggedIn": "¡Cuenta creada y sesión iniciada exitosamente!"
+      }
+    }
+  },
+  "Header": {
+    "appName": "Ciudad Sostenible",
+    "loginButton": "Entrar",
+    "loadingUser": "Cargando información del usuario",
+    "nav": {
+      "homeMap": "Inicio (Mapa)",
+      "adminDashboard": "Panel Admin",
+      "operatorTasks": "Tareas Operario",
+      "searchContainers": "Buscar Contenedores",
+      "reportIncident": "Reportar Incidencia"
+    },
+    "userMenu": {
+      "openMenu": "Abrir menú de usuario",
+      "myPanel": "Mi Panel",
+      "logout": "Cerrar Sesión"
+    },
+    "mobileMenu": {
+      "open": "Abrir menú"
+    }
+  },
+  "Footer": {
+    "appName": "Ciudad Sostenible",
+    "appDescription": "Optimizando la gestión de residuos y fomentando la sostenibilidad en las ciudades.",
+    "devName": "Antonio Miguel Herrero",
+    "appInfo": "Creado con amor y código limpio. ♻️",
+    "subscription": {
+      "title": "Mantente Informado",
+      "description": "Recibe ideas, noticias y consejos periódicos para ayudarnos a construir una ciudad más verde y sostenible, directamente en tu bandeja de entrada.",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "tu.correo@ejemplo.com",
+      "submittingButton": "Enviando...",
+      "submitButton": "Suscribirse",
+      "toast": {
+        "error": {
+          "emailRequired": "Por favor, ingresa un correo electrónico.",
+          "invalidEmail": "Por favor, ingresa un correo electrónico válido.",
+          "alreadySubscribed": "Este correo electrónico ya está suscrito.",
+          "default": "Error al suscribirse."
+        },
+        "success": {
+          "title": "¡Suscripción exitosa!",
+          "description": "Gracias por unirte a nuestra comunidad."
+        }
+      }
+    },
+    "socials": {
+      "title": "Síguenos",
+      "githubAriaLabel": "GitHub",
+      "linkedinAriaLabel": "LinkedIn",
+      "xAriaLabel": "X (anteriormente Twitter)"
+    },
+    "copyright": "© {year} {appName} - {devName}. Todos los derechos reservados."
+  },
+  "SubscribeFormCard": {
+    "title": "Suscríbete a Consejos de Sostenibilidad",
+    "description": "Recibe ideas, noticias y consejos periódicos para ayudarnos a construir una ciudad más verde y sostenible, directamente en tu bandeja de entrada.",
+    "emailLabel": "Tu Correo Electrónico",
+    "emailPlaceholder": "tu.correo@universidad.com",
+    "privacyNote": "No compartiremos tu correo con nadie más.",
+    "submittingButton": "Suscribiendo...",
+    "submitButton": "Suscribirme Ahora",
+    "toast": {
+      "error": {
+        "emailRequired": "Por favor, ingresa una dirección de correo electrónico.",
+        "invalidEmail": "Por favor, ingresa una dirección de correo electrónico válida.",
+        "alreadySubscribed": "Este correo electrónico ya está suscrito.",
+        "default": "Error al suscribirse. Inténtalo de nuevo más tarde."
+      },
+      "success": {
+        "subscribedTitle": "¡Te has suscrito exitosamente!",
+        "subscribedDescription": "Revisa tu correo para futuras recomendaciones y noticias de tu ciudad."
+      }
+    }
+  },
+  "ContainerMapWrapper": {
+    "loadingMap": "Cargando mapa..."
+  },
+  "ContainerMap": {
+    "loadingData": "Cargando datos de contenedores...",
+    "liveIndicator": "En directo",
+    "popup": {
+      "fillLevel": "Nivel de llenado: {fillLevel}%",
+      "wasteTypeLabel": "Residuos:",
+      "statusLabel": "Estado:",
+      "capacity": "Capacidad: {capacity}L"
+    },
+    "toast": {
+      "error": {
+        "loadContainersFailed": "No se pudieron cargar los contenedores."
+      }
+    }
+  },
+  "MapSelector": {
+    "instructionText": "Haz clic en el mapa para seleccionar el centro de tu búsqueda.",
+    "selectedPointText": "Punto seleccionado: Lat {lat}, Lng {lng}",
+    "LocationMarker": {
+      "popupText": "Centro de búsqueda seleccionado. Haz clic en otro lugar para cambiar."
+    }
+  },
+  "AdminSidebar": {
+    "sidebarLabel": "Barra lateral de administración",
+    "mobileHeaderTitle": "Panel Admin",
+    "desktopHeaderTitle": "Admin Panel",
+    "closeMenuButtonAriaLabel": "Cerrar menú",
+    "footerText": "Ciudad Sostenible Admin v{version}",
+    "nav": {
+      "dashboard": "Dashboard",
+      "containers": "Contenedores",
+      "statistics": "Estadísticas",
+      "operators": "Operarios"
+    }
+  },
+  "AdminDashboardPage": {
+    "pageTitle": "Panel Admin - Ciudad Sostenible",
+    "header": {
+      "title": "Panel de Control del Administrador",
+      "subtitle": "Vista general del sistema de gestión de residuos."
+    },
+    "cards": {
+      "fullContainers": {
+        "title": "Contenedores Llenos",
+        "description": "Requieren atención inmediata"
+      },
+      "openIncidents": {
+        "title": "Incidencias Abiertas",
+        "description": "Pendientes de resolución"
+      },
+      "availableContainers": {
+        "title": "Contenedores Disponibles",
+        "description": "Contenedores totales disponibles"
+      },
+      "viewStats": {
+        "title": "Ver Estadísticas",
+        "link": "Ir a Estadísticas Detalladas",
+        "description": "Analiza tendencias y rendimiento."
+      }
+    },
+    "toast": {
+      "error": {
+        "fetchDataFailed": "No se pudieron cargar los datos del panel."
+      }
+    }
+  },
+  "AdminDashboardClientContent": {
+    "mapCard": {
+      "title": "Mapa de Contenedores"
+    },
+    "incidentsCard": {
+      "title": "Incidencias Recientes",
+      "placeholder": "(Próximamente: Lista de incidencias activas aquí)"
+    },
+    "alertsCard": {
+      "title": "Alertas Activas",
+      "placeholder": "(Próximamente: Lista de alertas importantes aquí)"
+    },
+    "toast": {
+      "criticalAlert": "¡Alerta Crítica! Contenedor {location} al {fillLevel}%"
+    }
+  },
+  "AdminStatsPage": {
+    "title": "Estadísticas de Uso de Contenedores",
+    "subtitle": "Analiza el rendimiento y optimiza la gestión de residuos."
+  },
+  "AdminStatsClientContent": {
+    "filters": {
+      "title": "Filtros de Estadísticas",
+      "containerTypeLabel": "Tipo de Contenedor",
+      "selectTypePlaceholder": "Selecciona tipo",
+      "applyButton": "Aplicar Filtros"
+    },
+    "loadingState": {
+      "loadingText": "Cargando estadísticas..."
+    },
+    "errorState": {
+      "title": "Error al Cargar Estadísticas",
+      "retryButton": "Intentar de Nuevo"
+    },
+    "emptyState": {
+      "noData": "No hay datos de estadísticas disponibles para los filtros seleccionados."
+    },
+    "fillLevelCard": {
+      "title": "Distribución de Niveles de Llenado",
+      "description": "Cantidad de contenedores por rango de llenado y estado."
+    },
+    "containerTypeCard": {
+      "title": "Distribución por Tipo de Contenedor",
+      "description": "Proporción de contenedores activos por tipo."
+    },
+    "toast": {
+      "error": {
+        "loadStatsFailed": "No se pudieron cargar los datos de estadísticas."
+      },
+      "info": {
+        "newDataAvailable": "Nuevos datos disponibles. Actualizando estadísticas..."
+      }
+    },
+    "chartLabels": {
+      "fillLevelDistributionRanges": {
+        "range0_25": "0-25%",
+        "range26_50": "26-50%",
+        "range51_75": "51-75%",
+        "range76_84": "76-84%",
+        "range85_99_critical": "85-99% (Crítico)",
+        "rangeFull_100": "Lleno (100%)",
+        "rangeDamagedOrOverflowing": "Dañado/Desbordado"
+      },
+      "fillLevelChartTitle": "Estado Actual de Contenedores",
+      "fillLevelDatasetLabel": "Número de Contenedores",
+      "containerTypeChartTitle": "Tipos de Contenedor"
+    }
+  },
+  "AdminContainersManagementPage": {
+    "title": "Gestión de Contenedores",
+    "subtitle": "Crea, visualiza, edita y gestiona las asignaciones de los contenedores."
+  },
+  "AssignOperatorsToContainerDialog": {
+    "title": "Asignar Operarios a \"{location}\"",
+    "description": "Selecciona los operarios responsables de este contenedor.",
+    "loadingOperators": "Cargando operarios...",
+    "noOperatorsAvailable": "No hay operarios disponibles.",
+    "cancelButton": "Cancelar",
+    "savingButton": "Guardando...",
+    "saveButton": "Guardar Asignaciones",
+    "toast": {
+      "error": {
+        "fetchAssignedFailed": "Error al obtener operarios asignados.",
+        "updateFailed": "Error al actualizar la asignación."
+      },
+      "success": {
+        "assignmentUpdated": "Operarios asignados a \"{location}\" actualizados."
+      }
+    }
+  },
+  "ContainerForm": {
+    "locationLabel": "Ubicación (nombre descriptivo)",
+    "locationPlaceholder": "Ej: Ikea",
+    "capacityLabel": "Capacidad (L)",
+    "typeLabel": "Tipo de Contenedor",
+    "typePlaceholder": "Selecciona tipo",
+    "mapLocationLabel": "Selecciona ubicación en el mapa",
+    "cancelButton": "Cancelar",
+    "savingButton": "Guardando...",
+    "creatingButton": "Creando...",
+    "saveChangesButton": "Guardar Cambios",
+    "createButton": "Crear Contenedor",
+    "toast": {
+      "error": {
+        "typeRequired": "Por favor, selecciona un tipo de contenedor.",
+        "locationRequired": "Por favor, ingresa una ubicación para el contenedor.",
+        "updateFailed": "Error al actualizar el contenedor.",
+        "createFailed": "Error al crear el contenedor."
+      },
+      "success": {
+        "updated": "Contenedor \"{location}\" actualizado exitosamente.",
+        "created": "Contenedor \"{location}\" creado exitosamente."
+      }
+    }
+  },
+  "AdminContainersClientPage": {
+    "toast": {
+      "error": {
+        "loadContainersFailed": "No se pudieron cargar los contenedores.",
+        "loadOperatorsFailed": "No se pudieron cargar los operarios.",
+        "deleteContainerFailed": "No se pudo eliminar el contenedor.",
+        "pdfGenerationFailed": "Error al generar el PDF: Estado {status}",
+        "pdfDefaultError": "No se pudo generar el PDF."
+      },
+      "success": {
+        "containerDeleted": "Contenedor eliminado correctamente.",
+        "qrPdfGenerated": "PDF de códigos QR generado y descarga iniciada.",
+        "statusPdfGenerated": "PDF de estado de contenedores generado y descarga iniciada."
+      }
+    },
+    "deleteConfirmation": {
+      "message": "¿Estás seguro de que quieres eliminar este contenedor? Esta acción no se puede deshacer."
+    },
+    "retryButton": "Reintentar",
+    "buttons": {
+      "createContainer": "Crear Contenedor",
+      "generatingPdf": "Generando PDF...",
+      "generateQrPdf": "Generar PDF con QRs",
+      "generateStatusPdf": "Generar PDF de Estados"
+    },
+    "dialogs": {
+      "editContainer": {
+        "title": "Editar Contenedor",
+        "description": "Modifica los detalles del contenedor."
+      },
+      "createContainer": {
+        "title": "Crear Nuevo Contenedor",
+        "description": "Completa los datos para registrar un nuevo contenedor."
+      }
+    },
+    "dataTable": {
+      "searchPlaceholder": "Buscar por ubicación, tipo o estado...",
+      "noResults": "No se encontraron contenedores."
+    },
+    "columns": {
+      "location": "Ubicación",
+      "type": "Tipo",
+      "status": "Estado",
+      "fillLevel": "Llenado (%)",
+      "assignedOperators": "Operarios Asignados",
+      "noneAssigned": "Ninguno",
+      "moreOperators": "+{count} más",
+      "lastUpdated": "Últ. Actualización",
+      "notAvailable": "N/A",
+      "actions": {
+        "header": "Acciones",
+        "openMenu": "Abrir menú",
+        "label": "Acciones",
+        "edit": "Editar Contenedor",
+        "assign": "Asignar Operarios",
+        "viewOnMap": "Ver en Mapa",
+        "delete": "Eliminar Contenedor"
+      }
+    }
+  },
+  "AdminOperatorsPage": {
+    "title": "Gestión de Operarios",
+    "subtitle": "Crea, visualiza y edita los operarios del sistema."
+  },
+  "AdminOperatorsClientPage": {
+    "toast": {
+      "success": {
+        "operatorsUpdated": "Lista de operarios actualizada.",
+        "operatorDeleted": "Operario eliminado correctamente."
+      },
+      "error": {
+        "loadOperatorsFailed": "No se pudieron cargar los operarios.",
+        "loadContainersFailed": "No se pudieron cargar los contenedores para asignación.",
+        "deleteOperatorFailed": "No se pudo eliminar el operario."
+      }
+    },
+    "deleteConfirmation": {
+      "message": "¿Estás seguro de que quieres eliminar a este operario?"
+    },
+    "assignContainersPrompt": {
+      "message": "¿Deseas asignar contenedores a {name} ahora?"
+    },
+    "retryButton": "Reintentar",
+    "buttons": {
+      "createOperator": "Crear Operario"
+    },
+    "dialogs": {
+      "editOperator": {
+        "title": "Editar Operario",
+        "description": "Modifica los detalles del operario."
+      },
+      "createOperator": {
+        "title": "Crear Nuevo Operario",
+        "description": "Completa los datos para registrar un nuevo operario."
+      }
+    },
+    "dataTable": {
+      "searchPlaceholder": "Buscar operarios por nombre o email...",
+      "noResults": "No se encontraron operarios."
+    },
+    "columns": {
+      "select": {
+        "selectAllAriaLabel": "Seleccionar todo",
+        "selectRowAriaLabel": "Seleccionar fila"
+      },
+      "name": "Nombre",
+      "email": "Email",
+      "createdAt": "Fecha de Creación",
+      "verifiedStatus": "Verificado",
+      "verified": "Verificado",
+      "notVerified": "No verificado",
+      "notAvailable": "N/A",
+      "actions": {
+        "header": "Acciones",
+        "openMenu": "Abrir menú",
+        "label": "Acciones",
+        "edit": "Editar Operario",
+        "assignContainers": "Asignar Contenedores",
+        "delete": "Eliminar Operario"
+      }
+    }
+  },
+  "AssignContainersDialog": {
+    "header": {
+      "title": "Asignar Contenedores a {operatorName}",
+      "description": "Selecciona los contenedores que este operario debe gestionar."
+    },
+    "loadingAssignments": "Cargando asignaciones...",
+    "buttons": {
+      "deselectAll": "Deseleccionar todos",
+      "selectAll": "Seleccionar todos",
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "save": "Guardar Asignación"
+    },
+    "noContainersToAssign": "No hay contenedores disponibles para asignar.",
+    "toast": {
+      "error": {
+        "loadAssignedFailed": "No se pudieron cargar los contenedores asignados actualmente.",
+        "updateFailed": "Error al actualizar la asignación."
+      },
+      "success": {
+        "assignmentUpdated": "Asignación de contenedores para {operatorName} actualizada."
+      }
+    }
+  },
+  "OperatorForm": {
+    "nameLabel": "Nombre Completo",
+    "namePlaceholder": "Ej: Juan Pérez García",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "operario@universidad.com",
+    "buttons": {
+      "cancel": "Cancelar",
+      "updating": "Actualizando...",
+      "creating": "Creando...",
+      "saveChanges": "Guardar Cambios",
+      "createOperator": "Crear Operario"
+    },
+    "toast": {
+      "error": {
+        "emailRequired": "Por favor, ingresa un correo electrónico.",
+        "invalidEmail": "Por favor, ingresa un correo electrónico válido.",
+        "nameRequired": "Por favor, ingresa un nombre.",
+        "updateFailed": "Error al actualizar el operario.",
+        "createFailed": "Error al crear el operario."
+      },
+      "success": {
+        "updated": "Operario \"{nameOrEmail}\" actualizado exitosamente.",
+        "created": "Operario \"{nameOrEmail}\" creado exitosamente. Revisa su correo para establecer la contraseña."
+      }
+    }
+  },
+  "OperatorSidebar": {
+    "sidebarLabel": "Barra lateral de operario",
+    "headerTitle": "Panel Operario",
+    "footerText": "Operario Móvil v{version}",
+    "nav": {
+      "myTasks": "Mis Tareas",
+      "downloadTasksPdf": "Descargar Tareas (PDF)"
+    }
+  },
+  "OperatorTasksPage": {
+    "title": "Mis Tareas Asignadas",
+    "subtitle": "Contenedores que requieren tu atención. Las actualizaciones son en tiempo real.",
+    "downloadPdfButton": "Descargar PDF"
+  },
+  "OperatorTasksClientContent": {
+    "toast": {
+      "error": {
+        "loadTasksFailed": "No se pudieron cargar las tareas.",
+        "updateTaskFailed": "Error al actualizar la tarea."
+      },
+      "info": {
+        "newAssignmentTitle": "¡Nueva tarea asignada!",
+        "newAssignmentDescription": "Contenedor en: {location}",
+        "taskUpdated": "Tarea actualizada: {location}"
+      },
+      "success": {
+        "incidentResolved": "Incidencia en \"{location}\" marcada como resuelta.",
+        "containerEmptied": "Contenedor \"{location}\" marcado como vaciado."
+      }
+    },
+    "noTasks": {
+      "title": "¡Todo Listo!",
+      "description": "No tienes tareas asignadas por el momento.",
+      "reloadButton": "Volver a Cargar Tareas"
+    },
+    "taskCard": {
+      "labels": {
+        "fillLevel": "Nivel",
+        "status": "Estado",
+        "taskDescription": "Descripción Tarea",
+        "containerType": "Tipo"
+      },
+      "lastUpdatedLabel": "Última actualización",
+      "buttons": {
+        "markAsManaged": "Marcar como Gestionado"
+      }
+    },
+    "alertDialog": {
+      "title": "Confirmar Acción",
+      "description": "¿Estás seguro de que has gestionado la tarea para el contenedor en \"{location}\"? Esto actualizará su estado a {status} y nivel de llenado a {fillLevel}%.",
+      "incidentResolvedNote": "Si era una incidencia, se marcará como resuelta.",
+      "buttons": {
+        "cancel": "Cancelar",
+        "updating": "Actualizando...",
+        "confirm": "Sí, Confirmar"
+      }
+    }
+  },
+  "OperatorTasksPdfPage": {
+    "pageTitle": "PDF de Tareas - Operario",
+    "header": {
+      "title": "Tareas del Día (PDF)",
+      "subtitle": "Visualiza tu plan de trabajo diario. Puedes descargarlo manualmente si lo necesitas."
+    },
+    "buttons": {
+      "download": "Descargar",
+      "retry": "Intentar de Nuevo"
+    },
+    "statusMessages": {
+      "generatingPdf": "Generando PDF de tareas...",
+      "errorProcessingPdfTitle": "Error al Procesar el PDF",
+      "pdfNotGenerated": "No se pudo generar el PDF para visualización."
+    },
+    "pdfViewer": {
+      "title": "Visor de PDF de Tareas",
+      "ariaLabel": "Visor de PDF de Tareas del Operario",
+      "downloadHint": "Puedes usar el botón \"Descargar\" para guardar una copia del PDF."
+    },
+    "download": {
+      "filename": "tareas-operario-{operatorId}-{date}.pdf",
+      "unknownOperator": "desconocido"
+    },
+    "toast": {
+      "success": {
+        "downloadStarted": "Descarga iniciada."
+      },
+      "info": {
+        "pdfLoadingOrUnavailable": "El PDF aún se está cargando o no está disponible."
+      },
+      "error": {
+        "pdfGenerationFailed": "Error al generar el PDF de tareas."
+      }
+    }
+  }
+}

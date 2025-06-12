@@ -1,0 +1,13 @@
+{
+    "GENERAL": "General",
+    "PAPER": "Paper",
+    "PLASTIC": "Plastic",
+    "GLASS": "Glass",
+    "ORGANIC": "Organic",
+    "METAL": "Metal",
+    "ELECTRONICS": "Electronics",
+    "BATTERIES": "Batteries",
+    "CLOTHING": "Clothing",
+    "OIL": "Oil",
+    "OTHERS": "Others"
+}

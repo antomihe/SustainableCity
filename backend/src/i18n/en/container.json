@@ -1,0 +1,4 @@
+{
+  "NOT_FOUND": "Container with ID {id} not found.",
+  "NOT_FOUND_MULTIPLE": "Containers with IDs {ids} not found."
+}

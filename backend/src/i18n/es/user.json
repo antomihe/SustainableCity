@@ -1,0 +1,5 @@
+{
+  "EMAIL_IN_USE": "El correo electrónico {email} ya está en uso.",
+  "USER_NOT_FOUND": "Usuario con ID {id} no encontrado.",
+  "OPERATOR_CREATED_SUCCESS": "Operador creado con éxito. Se ha enviado un correo para establecer la contraseña."
+}

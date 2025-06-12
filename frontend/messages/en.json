@@ -1,0 +1,825 @@
+{
+  "RootLayout": {
+    "title": "Sustainable City",
+    "description": "Efficient waste management."
+  },
+  "LocaleSwitcher": {
+    "label": "Select Language",
+    "en": "English",
+    "es": "Spanish"
+  },
+  "ThemeToggle": {
+    "toggleTheme": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "types": {
+    "containerTypes": {
+      "GENERAL": "General",
+      "PLASTIC": "Plastic",
+      "PAPER": "Paper & Cardboard",
+      "GLASS": "Glass",
+      "ORGANIC": "Organic",
+      "METAL": "Metal",
+      "ELECTRONICS": "Electronics",
+      "BATTERIES": "Batteries",
+      "CLOTHING": "Clothing",
+      "OIL": "Used Oil",
+      "OTHERS": "Other"
+    },
+    "containerStatuses": {
+      "OK": "OK",
+      "FULL": "Full",
+      "DAMAGED": "Damaged"
+    },
+    "userRoles": {
+      "Admin": "Administrator",
+      "Operator": "Operator",
+      "User": "User"
+    }
+  },
+  "shared": {
+    "allTypes": "All Types"
+  },
+  "HomePage": {
+    "campusNamePrefix": "SUSTAINABLE",
+    "campusNameSuffixSustainable": "CITY",
+    "subtitle": "Manage and visualize waste containers.",
+    "tagline": "Recycling is not just smart, it's the most polite way to tell the planet: ",
+    "taglineHighlight": " thank you for everything 🌍"
+  },
+  "NotFoundPage": {
+    "metadata": {
+      "title": "Page Not Found - Sustainable City"
+    },
+    "content": {
+      "title": "Container not found",
+      "description": "It seems this link was RECYCLED or mistakenly sent to the bin.",
+      "descriptionHighlight": "Don't worry, we can help you find your way back.",
+      "goHomeButton": "Go Back Home",
+      "searchContainerButton": "Search for a container",
+      "tipOfTheDay": "Tip of the day: turn off your router, recycle your scripts, and take care of the planet 🌍."
+    }
+  },
+  "SearchPage": {
+    "metadata": {
+      "title": "Search Nearby Containers",
+      "description": "Find waste containers near you and filter by type or status."
+    },
+    "content": {
+      "title": "Search Containers",
+      "subtitle": "Find the recycling and waste points closest to your location."
+    }
+  },
+  "SearchClientPage": {
+    "loading": {
+      "mapResults": "Loading results map...",
+      "mapSelector": "Loading map selector..."
+    },
+    "filters": {
+      "title": "Search Filters",
+      "description": "Define your location, radius, and criteria to find nearby containers.",
+      "searchCenterLabel": "Search Center (Select on map)",
+      "locatingButton": "Getting location...",
+      "useMyLocationButton": "Use My Current Location",
+      "searchTermLabel": "Search Term (Optional)",
+      "searchTermPlaceholder": "E.g.: Library, Sports Center...",
+      "searchRadiusLabel": "Search Radius: {radius} km",
+      "containerTypeLabel": "Container Type",
+      "anyType": "Any type",
+      "searchTypePlaceholder": "Search type...",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "containerStatusLabel": "Container Status",
+      "anyStatus": "Any status",
+      "searchStatusPlaceholder": "Search status...",
+      "searchButton": "Search Containers"
+    },
+    "results": {
+      "errorTitle": "Search Error",
+      "titleFound": "{count, plural, one {1 Search Result} other {# Search Results}}",
+      "description": "Containers found based on your criteria.",
+      "mapTitle": "Results Map",
+      "listTitle": "List of Found Containers",
+      "containerTypeLabel": "Type",
+      "containerStatusLabel": "Status",
+      "statusN_A": "N/A",
+      "fillLevelLabel": "Fill Level: {level}%",
+      "capacityLabel": "Capacity: {capacity}L",
+      "distanceLabel": "Distance: {distance} km",
+      "lastEmptiedLabel": "Last Emptied: {date}",
+      "openInMapsAriaLabel": "Open in Google Maps",
+      "reportIncidentLink": "Report incident for this container",
+      "noContainersFoundTitle": "No containers found",
+      "noContainersFoundSuggestion": "Try expanding the search radius or adjusting the type/status filters."
+    },
+    "toast": {
+      "error": {
+        "geolocationNotSupported": "Geolocation is not supported by your browser.",
+        "geolocationPermissionDenied": "Could not get your location: Permission denied.",
+        "geolocationPositionUnavailable": "Could not get your location: Information unavailable.",
+        "geolocationTimeout": "Could not get your location: Timeout.",
+        "geolocationGenericError": "Could not get your location.",
+        "selectLocationFirst": "Please select a location on the map or use your current location for the search.",
+        "searchDefault": "Error searching for containers."
+      },
+      "success": {
+        "locationObtained": "Current location obtained. Adjust radius and search.",
+        "foundContainers": "{count, plural, =0 {No containers found} one {# container found} other {# containers found}}."
+      },
+      "info": {
+        "noContainersFoundFilters": "No containers found with the applied filters."
+      }
+    }
+  },
+  "ReportIncidentPage": {
+    "metadata": {
+      "title": "Report Container Incident",
+      "description": "Help us keep our containers in optimal condition."
+    },
+    "content": {
+      "title": "Report Container Incident",
+      "subtitle": "Help us keep our containers in optimal condition.",
+      "anonymityNote": "Your report is anonymous and will help us improve waste management on city.",
+      "thankYouNote": "Thanks for helping keep the city as clean as your code 💚💻♻️",
+      "loadingForm": "Loading form..."
+    }
+  },
+  "ReportIncidentFormCard": {
+    "title": "Incident Details",
+    "description": "Complete the information about the detected anomaly.",
+    "affectedContainerLabel": "Affected Container",
+    "loadingContainersPlaceholder": "Loading containers...",
+    "selectContainerPlaceholder": "Select a container",
+    "loadingItem": "Loading...",
+    "noContainersAvailable": "No containers available",
+    "incidentTypeLabel": "Type of incident",
+    "selectIncidentTypePlaceholder": "Select incident type",
+    "incidentTypes": {
+      "FULL": "Full",
+      "DAMAGED": "Damaged"
+    },
+    "incidentDescriptionLabel": "Incident Description (if applicable)",
+    "descriptionPlaceholder": "E.g.: The container is broken in the upper corner, the lid does not close, it does not have a QR code...",
+    "submittingButton": "Submitting Report...",
+    "submitButton": "Submit Report",
+    "toast": {
+      "error": {
+        "fetchContainers": "Could not load containers for the report.",
+        "selectContainer": "Please select a container.",
+        "selectIncidentType": "Please select an incident type.",
+        "reportFailedDefault": "Error reporting the incident."
+      },
+      "success": {
+        "reportSucceededTitle": "Incident reported successfully!",
+        "reportSucceededDescription": "Thank you for your collaboration."
+      }
+    }
+  },
+  "LoginPage": {
+    "metadata": {
+      "title": "Log In - Sustainable City",
+      "description": "Access your account to manage containers."
+    },
+    "content": {
+      "title": "Log In",
+      "subtitle": "Access your account to continue the experience.",
+      "footerNote": "🧠 This form has been optimized with sustainable logic and best practices. Zero bug emissions! 🌿"
+    }
+  },
+  "LoginForm": {
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "******",
+    "loadingButton": "Loading...",
+    "submitButton": "Log In",
+    "noAccountPrompt": "Don't have an account yet?",
+    "createAccountLink": "Create account",
+    "forgotPasswordPrompt": "Forgot your password?",
+    "recoverPasswordLink": "Recover password",
+    "toast": {
+      "success": {
+        "loggedIn": "Logged in successfully!"
+      },
+      "error": {
+        "default": "Login failed. Please check your credentials."
+      }
+    }
+  },
+  "RegisterPage": {
+    "metadata": {
+      "title": "Create Account - Sustainable City",
+      "description": "Sign up to access container management."
+    },
+    "content": {
+      "title": "Create Account",
+      "subtitle": "Welcome! Complete the form to start enjoying our services.",
+      "alreadyHaveAccountPrompt": "Already have an account?",
+      "loginLink": "Log in here",
+      "footerNote": "♻️ We keep your data safe... and recycle components with love."
+    }
+  },
+  "RegisterForm": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "youremail@example.com",
+    "loadingButton": "Sending...",
+    "submitButton": "Sign Up",
+    "toast": {
+      "success": {
+        "requestSent": "Registration request sent!"
+      },
+      "error": {
+        "default": "Error requesting registration. Please try again."
+      }
+    },
+    "uiMessage": {
+      "success": {
+        "checkEmail": "✅ Check your email to complete the registration. The link will expire in 5 minutes."
+      }
+    }
+  },
+  "RecoverPasswordPage": {
+    "metadata": {
+      "title": "Recover Password - Sustainable City",
+      "description": "Reset your password to access your account."
+    },
+    "content": {
+      "title": "Recover Password",
+      "subtitle": "Enter your email address and we'll send you a link to reset your password.",
+      "footerNote": "🌱 We promise to generate an email with 100% renewable energy... and clean code. 💻♻️"
+    }
+  },
+  "RequestPasswordResetForm": {
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@email.com",
+    "loadingButton": "Sending...",
+    "submitButton": "Send recovery link",
+    "toast": {
+      "success": {
+        "requestSent": "Request sent"
+      },
+      "error": {
+        "default": "Error processing request. Please try again."
+      }
+    },
+    "uiMessage": {
+      "success": {
+        "checkEmail": "If an account exists for this email, you will receive a link to reset your password shortly. The link will expire in 5 minutes."
+      }
+    }
+  },
+  "SetPasswordTokenPage": {
+    "pageTitle": "Set Password - Sustainable City",
+    "verifyingToken": "Verifying token...",
+    "toast": {
+      "tokenNotFound": "Token not found or invalid."
+    }
+  },
+  "SetPasswordForm": {
+    "title": "Set new password",
+    "securityTip": "🔒 Remember: Don't use \"password123\"! (Your grandma shouldn't be able to guess your key 😉)",
+    "newPasswordLabel": "New password",
+    "confirmPasswordLabel": "Confirm password",
+    "passwordPlaceholder": "******",
+    "loadingButton": "Saving...",
+    "submitButton": "Set password and log in",
+    "toast": {
+      "error": {
+        "passwordsDoNotMatch": "Passwords do not match.",
+        "passwordTooShort": "Password must be at least {minLength} characters long.",
+        "default": "Error setting password. The link may have expired or be invalid."
+      },
+      "success": {
+        "passwordSetAndLoggedIn": "Account created and logged in successfully!"
+      }
+    }
+  },
+  "Header": {
+    "appName": "Sustainable City",
+    "loginButton": "Log In",
+    "loadingUser": "Loading user information",
+    "nav": {
+      "homeMap": "Home (Map)",
+      "adminDashboard": "Admin Dashboard",
+      "operatorTasks": "Operator Tasks",
+      "searchContainers": "Search Containers",
+      "reportIncident": "Report Incident"
+    },
+    "userMenu": {
+      "openMenu": "Open user menu",
+      "myPanel": "My Panel",
+      "logout": "Log Out"
+    },
+    "mobileMenu": {
+      "open": "Open menu"
+    }
+  },
+  "Footer": {
+    "appName": "Sustainable City",
+    "appDescription": "Optimizing waste management and promoting sustainability on cities.",
+    "devName": "Antonio Miguel Herrero",
+    "appInfo": "Created with love and clean code. ♻️",
+    "subscription": {
+      "title": "Stay Informed",
+      "description": "Receive regular ideas, news, and tips to help us build a greener, more sustainable city, directly in your inbox.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "submittingButton": "Sending...",
+      "submitButton": "Subscribe",
+      "toast": {
+        "error": {
+          "emailRequired": "Please enter an email address.",
+          "invalidEmail": "Please enter a valid email address.",
+          "alreadySubscribed": "This email address is already subscribed.",
+          "default": "Error subscribing."
+        },
+        "success": {
+          "title": "Subscription successful!",
+          "description": "Thank you for joining our community."
+        }
+      }
+    },
+    "socials": {
+      "title": "Follow Us",
+      "githubAriaLabel": "GitHub",
+      "linkedinAriaLabel": "LinkedIn",
+      "xAriaLabel": "X (formerly Twitter)"
+    },
+    "copyright": "© {year} {appName} - {devName}. All rights reserved."
+  },
+  "SubscribeFormCard": {
+    "title": "Subscribe to Sustainability Tips",
+    "description": "Receive regular ideas, news, and tips to help us build a greener, more sustainable city, directly in your inbox.",
+    "emailLabel": "Your Email Address",
+    "emailPlaceholder": "your.email@university.com",
+    "privacyNote": "We will not share your email with anyone else.",
+    "submittingButton": "Subscribing...",
+    "submitButton": "Subscribe Now",
+    "toast": {
+      "error": {
+        "emailRequired": "Please enter an email address.",
+        "invalidEmail": "Please enter a valid email address.",
+        "alreadySubscribed": "This email address is already subscribed.",
+        "default": "Error subscribing. Please try again later."
+      },
+      "success": {
+        "subscribedTitle": "Successfully subscribed!",
+        "subscribedDescription": "Check your email for future recommendations and city news."
+      }
+    }
+  },
+  "ContainerMapWrapper": {
+    "loadingMap": "Loading map..."
+  },
+  "ContainerMap": {
+    "loadingData": "Loading container data...",
+    "liveIndicator": "Live",
+    "popup": {
+      "fillLevel": "Fill Level: {fillLevel}%",
+      "wasteTypeLabel": "Waste Type:",
+      "statusLabel": "Status:",
+      "capacity": "Capacity: {capacity}L"
+    },
+    "toast": {
+      "error": {
+        "loadContainersFailed": "Could not load containers."
+      }
+    }
+  },
+  "MapSelector": {
+    "instructionText": "Click on the map to select the center of your search.",
+    "selectedPointText": "Selected point: Lat {lat}, Lng {lng}",
+    "LocationMarker": {
+      "popupText": "Selected search center. Click elsewhere to change."
+    }
+  },
+  "AdminSidebar": {
+    "sidebarLabel": "Administration sidebar",
+    "mobileHeaderTitle": "Admin Panel",
+    "desktopHeaderTitle": "Admin Panel",
+    "closeMenuButtonAriaLabel": "Close menu",
+    "footerText": "Sustainable City Admin v{version}",
+    "nav": {
+      "dashboard": "Dashboard",
+      "containers": "Containers",
+      "statistics": "Statistics",
+      "operators": "Operators"
+    }
+  },
+  "AdminStatsPage": {
+    "title": "Container Usage Statistics",
+    "subtitle": "Analyze the performance and optimize waste management."
+  },
+  "AdminDashboardPage": {
+    "pageTitle": "Admin Dashboard - Sustainable City",
+    "header": {
+      "title": "Administrator Dashboard",
+      "subtitle": "Overview of the waste management system."
+    },
+    "cards": {
+      "fullContainers": {
+        "title": "Full Containers",
+        "description": "Require immediate attention"
+      },
+      "openIncidents": {
+        "title": "Open Incidents",
+        "description": "Pending resolution"
+      },
+      "availableContainers": {
+        "title": "Available Containers",
+        "description": "Total available containers"
+      },
+      "viewStats": {
+        "title": "View Statistics",
+        "link": "Go to Detailed Statistics",
+        "description": "Analyze trends and performance."
+      }
+    },
+    "toast": {
+      "error": {
+        "fetchDataFailed": "Could not load dashboard data."
+      }
+    }
+  },
+  "AdminDashboardClientContent": {
+    "mapCard": {
+      "title": "Container Map"
+    },
+    "incidentsCard": {
+      "title": "Recent Incidents",
+      "placeholder": "(Coming soon: List of active incidents here)"
+    },
+    "alertsCard": {
+      "title": "Active Alerts",
+      "placeholder": "(Coming soon: List of important alerts here)"
+    },
+    "toast": {
+      "criticalAlert": "Critical Alert! Container {location} at {fillLevel}%"
+    }
+  },
+  "AdminStatsClientContent": {
+    "filters": {
+      "title": "Statistics Filters",
+      "containerTypeLabel": "Container Type",
+      "selectTypePlaceholder": "Select type",
+      "applyButton": "Apply Filters"
+    },
+    "loadingState": {
+      "loadingText": "Loading statistics..."
+    },
+    "errorState": {
+      "title": "Error Loading Statistics",
+      "retryButton": "Try Again"
+    },
+    "emptyState": {
+      "noData": "No statistics data available for the selected filters."
+    },
+    "fillLevelCard": {
+      "title": "Fill Level Distribution",
+      "description": "Number of containers by fill range and status."
+    },
+    "containerTypeCard": {
+      "title": "Distribution by Container Type",
+      "description": "Proportion of active containers by type."
+    },
+    "toast": {
+      "error": {
+        "loadStatsFailed": "Could not load statistics data."
+      },
+      "info": {
+        "newDataAvailable": "New data available. Updating statistics..."
+      }
+    },
+    "chartLabels": {
+      "fillLevelDistributionRanges": {
+        "range0_25": "0-25%",
+        "range26_50": "26-50%",
+        "range51_75": "51-75%",
+        "range76_84": "76-84%",
+        "range85_99_critical": "85-99% (Critical)",
+        "rangeFull_100": "Full (100%)",
+        "rangeDamagedOrOverflowing": "Damaged/Overflowing"
+      },
+      "fillLevelChartTitle": "Current Status of Containers",
+      "fillLevelDatasetLabel": "Number of Containers",
+      "containerTypeChartTitle": "Container Types"
+    }
+  },
+  "AdminContainersManagementPage": {
+    "title": "Container Management",
+    "subtitle": "Create, view and manage waste containers assignations."
+  },
+  "AssignOperatorsToContainerDialog": {
+    "title": "Assign Operators to \"{location}\"",
+    "description": "Select the operators responsible for this container.",
+    "loadingOperators": "Loading operators...",
+    "noOperatorsAvailable": "No operators available.",
+    "cancelButton": "Cancel",
+    "savingButton": "Saving...",
+    "saveButton": "Save Assignments",
+    "toast": {
+      "error": {
+        "fetchAssignedFailed": "Error fetching assigned operators.",
+        "updateFailed": "Error updating assignment."
+      },
+      "success": {
+        "assignmentUpdated": "Operators assigned to \"{location}\" updated."
+      }
+    }
+  },
+  "ContainerForm": {
+    "locationLabel": "Location (descriptive name)",
+    "locationPlaceholder": "E.g.: Ikea",
+    "capacityLabel": "Capacity (L)",
+    "typeLabel": "Container Type",
+    "typePlaceholder": "Select type",
+    "mapLocationLabel": "Select location on map",
+    "cancelButton": "Cancel",
+    "savingButton": "Saving...",
+    "creatingButton": "Creating...",
+    "saveChangesButton": "Save Changes",
+    "createButton": "Create Container",
+    "toast": {
+      "error": {
+        "typeRequired": "Please select a container type.",
+        "locationRequired": "Please enter a location for the container.",
+        "updateFailed": "Error updating container.",
+        "createFailed": "Error creating container."
+      },
+      "success": {
+        "updated": "Container \"{location}\" updated successfully.",
+        "created": "Container \"{location}\" created successfully."
+      }
+    }
+  },
+  "AdminContainersClientPage": {
+    "toast": {
+      "error": {
+        "loadContainersFailed": "Could not load containers.",
+        "loadOperatorsFailed": "Could not load operators.",
+        "deleteContainerFailed": "Could not delete container.",
+        "pdfGenerationFailed": "Error generating PDF: Status {status}",
+        "pdfDefaultError": "Could not generate PDF."
+      },
+      "success": {
+        "containerDeleted": "Container deleted successfully.",
+        "qrPdfGenerated": "QR codes PDF generated and download started.",
+        "statusPdfGenerated": "Container status PDF generated and download started."
+      }
+    },
+    "deleteConfirmation": {
+      "message": "Are you sure you want to delete this container? This action cannot be undone."
+    },
+    "retryButton": "Retry",
+    "buttons": {
+      "createContainer": "Create Container",
+      "generatingPdf": "Generating PDF...",
+      "generateQrPdf": "Generate QR PDF",
+      "generateStatusPdf": "Generate Status PDF"
+    },
+    "dialogs": {
+      "editContainer": {
+        "title": "Edit Container",
+        "description": "Modify the container details."
+      },
+      "createContainer": {
+        "title": "Create New Container",
+        "description": "Complete the data to register a new container."
+      }
+    },
+    "dataTable": {
+      "searchPlaceholder": "Search by location, type, or status...",
+      "noResults": "No containers found."
+    },
+    "columns": {
+      "location": "Location",
+      "type": "Type",
+      "status": "Status",
+      "fillLevel": "Fill Level (%)",
+      "assignedOperators": "Assigned Operators",
+      "noneAssigned": "None",
+      "moreOperators": "+{count} more",
+      "lastUpdated": "Last Updated",
+      "notAvailable": "N/A",
+      "actions": {
+        "header": "Actions",
+        "openMenu": "Open menu",
+        "label": "Actions",
+        "edit": "Edit Container",
+        "assign": "Assign Operators",
+        "viewOnMap": "View on Map",
+        "delete": "Delete Container"
+      }
+    }
+  },
+  "AdminOperatorsPage": {
+    "title": "Operator Management",
+    "subtitle": "Create, view and manage system operators."
+  },
+  "AdminOperatorsClientPage": {
+    "toast": {
+      "success": {
+        "operatorsUpdated": "Operator list updated.",
+        "operatorDeleted": "Operator deleted successfully."
+      },
+      "error": {
+        "loadOperatorsFailed": "Could not load operators.",
+        "loadContainersFailed": "Could not load containers for assignment.",
+        "deleteOperatorFailed": "Could not delete operator."
+      }
+    },
+    "deleteConfirmation": {
+      "message": "Are you sure you want to delete this operator?"
+    },
+    "assignContainersPrompt": {
+      "message": "Do you want to assign containers to {name} now?"
+    },
+    "retryButton": "Retry",
+    "buttons": {
+      "createOperator": "Create Operator"
+    },
+    "dialogs": {
+      "editOperator": {
+        "title": "Edit Operator",
+        "description": "Modify the operator's details."
+      },
+      "createOperator": {
+        "title": "Create New Operator",
+        "description": "Complete the data to register a new operator."
+      }
+    },
+    "dataTable": {
+      "searchPlaceholder": "Search operators by name or email...",
+      "noResults": "No operators found."
+    },
+    "columns": {
+      "select": {
+        "selectAllAriaLabel": "Select all",
+        "selectRowAriaLabel": "Select row"
+      },
+      "name": "Name",
+      "email": "Email",
+      "createdAt": "Creation Date",
+      "verifiedStatus": "Verified",
+      "verified": "Verified",
+      "notVerified": "Not verified",
+      "notAvailable": "N/A",
+      "actions": {
+        "header": "Actions",
+        "openMenu": "Open menu",
+        "label": "Actions",
+        "edit": "Edit Operator",
+        "assignContainers": "Assign Containers",
+        "delete": "Delete Operator"
+      }
+    }
+  },
+  "AssignContainersDialog": {
+    "header": {
+      "title": "Assign Containers to {operatorName}",
+      "description": "Select the containers this operator should manage."
+    },
+    "loadingAssignments": "Loading assignments...",
+    "buttons": {
+      "deselectAll": "Deselect All",
+      "selectAll": "Select All",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "save": "Save Assignment"
+    },
+    "noContainersToAssign": "No containers available to assign.",
+    "toast": {
+      "error": {
+        "loadAssignedFailed": "Could not load currently assigned containers.",
+        "updateFailed": "Error updating assignment."
+      },
+      "success": {
+        "assignmentUpdated": "Container assignment for {operatorName} updated."
+      }
+    }
+  },
+  "OperatorForm": {
+    "nameLabel": "Full Name",
+    "namePlaceholder": "E.g.: John Michael Doe",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "operator@university.com",
+    "buttons": {
+      "cancel": "Cancel",
+      "updating": "Updating...",
+      "creating": "Creating...",
+      "saveChanges": "Save Changes",
+      "createOperator": "Create Operator"
+    },
+    "toast": {
+      "error": {
+        "emailRequired": "Please enter an email address.",
+        "invalidEmail": "Please enter a valid email address.",
+        "nameRequired": "Please enter a name.",
+        "updateFailed": "Error updating operator.",
+        "createFailed": "Error creating operator."
+      },
+      "success": {
+        "updated": "Operator \"{nameOrEmail}\" updated successfully.",
+        "created": "Operator \"{nameOrEmail}\" created successfully. Check their email to set the password."
+      }
+    }
+  },
+  "OperatorSidebar": {
+    "sidebarLabel": "Operator sidebar",
+    "headerTitle": "Operator Panel",
+    "footerText": "Mobile Operator v{version}",
+    "nav": {
+      "myTasks": "My Tasks",
+      "downloadTasksPdf": "Download Tasks (PDF)"
+    }
+  },
+  "OperatorTasksPage": {
+    "title": "My Assigned Tasks",
+    "subtitle": "Containers requiring your attention. Updates are in real-time.",
+    "downloadPdfButton": "Download PDF"
+  },
+  "OperatorTasksClientContent": {
+    "toast": {
+      "error": {
+        "loadTasksFailed": "Could not load tasks.",
+        "updateTaskFailed": "Error updating task."
+      },
+      "info": {
+        "newAssignmentTitle": "New task assigned!",
+        "newAssignmentDescription": "Container at: {location}",
+        "taskUpdated": "Task updated: {location}"
+      },
+      "success": {
+        "incidentResolved": "Incident at \"{location}\" marked as resolved.",
+        "containerEmptied": "Container \"{location}\" marked as emptied."
+      }
+    },
+    "noTasks": {
+      "title": "All Set!",
+      "description": "You have no assigned tasks at the moment.",
+      "reloadButton": "Reload Tasks"
+    },
+    "taskCard": {
+      "labels": {
+        "fillLevel": "Level",
+        "status": "Status",
+        "taskDescription": "Task Description",
+        "containerType": "Type"
+      },
+      "lastUpdatedLabel": "Last updated",
+      "buttons": {
+        "markAsManaged": "Mark as Managed"
+      }
+    },
+    "alertDialog": {
+      "title": "Confirm Action",
+      "description": "Are you sure you have managed the task for the container at \"{location}\"? This will update its status to {status} and fill level to {fillLevel}%.",
+      "incidentResolvedNote": "If it was an incident, it will be marked as resolved.",
+      "buttons": {
+        "cancel": "Cancel",
+        "updating": "Updating...",
+        "confirm": "Yes, Confirm"
+      }
+    }
+  },
+  "OperatorTasksPdfPage": {
+    "pageTitle": "Tasks PDF - Operator",
+    "header": {
+      "title": "Daily Tasks (PDF)",
+      "subtitle": "View your daily work plan. You can download it manually if needed."
+    },
+    "buttons": {
+      "download": "Download",
+      "retry": "Try Again"
+    },
+    "statusMessages": {
+      "generatingPdf": "Generating tasks PDF...",
+      "errorProcessingPdfTitle": "Error Processing PDF",
+      "pdfNotGenerated": "Could not generate PDF for viewing."
+    },
+    "pdfViewer": {
+      "title": "Tasks PDF Viewer",
+      "ariaLabel": "Operator Tasks PDF Viewer",
+      "downloadHint": "You can use the \"Download\" button to save a copy of the PDF."
+    },
+    "download": {
+      "filename": "operator-tasks-{operatorId}-{date}.pdf",
+      "unknownOperator": "unknown"
+    },
+    "toast": {
+      "success": {
+        "downloadStarted": "Download started."
+      },
+      "info": {
+        "pdfLoadingOrUnavailable": "The PDF is still loading or is unavailable."
+      },
+      "error": {
+        "pdfGenerationFailed": "Could not generate the tasks PDF."
+      }
+    }
+  }
+}

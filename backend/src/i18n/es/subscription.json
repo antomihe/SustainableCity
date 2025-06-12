@@ -1,0 +1,17 @@
+{
+  "ALREADY_SUBSCRIBED": "El correo electrónico {email} ya está suscrito.",
+  "CONFIRMATION_SUBJECT": "Suscripción Exitosa a {appName}",
+  "CONFIRMATION_BODY_P1": "¡Gracias por suscribirte a las recomendaciones de sostenibilidad de {appName}!",
+  "CONFIRMATION_BODY_P2": "Recibirás consejos periódicos para ayudarnos a mantener nuestro campus limpio y verde.",
+  "TIP_SUBJECT": "Consejo de Sostenibilidad Semanal - {appName}",
+  "TIP_GREETING": "Hola,",
+  "TIP_INTRO": "Aquí tienes tu consejo de sostenibilidad de esta semana:",
+  "TIP_CLOSING": "¡Juntos podemos hacer un campus más sostenible!",
+  "TIPS_LIST": [
+    "Recuerda separar tus residuos correctamente: papel, plástico, vidrio y orgánico.",
+    "Reduce el uso de plásticos de un solo uso. ¡Trae tu propia botella de agua y taza de café!",
+    "Apaga las luces y desconecta los aparatos electrónicos cuando no los uses.",
+    "Participa en las campañas de reciclaje y limpieza del campus.",
+    "Infórmate sobre los puntos de recogida de residuos especiales (pilas, electrónicos)."
+  ]
+}

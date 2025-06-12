@@ -1,0 +1,14 @@
+{
+  "DAILY_TASKS_PDF_TITLE": "Plan de Tareas Diario - {operatorName}",
+  "PDF_DATE_LABEL": "Fecha: {date}",
+  "TABLE_HEADER_CONTAINER_LOCATION": "Ubicación Contenedor",
+  "TABLE_HEADER_FILL_LEVEL_PERCENT": "Nivel Llenado (%)",
+  "TABLE_HEADER_CURRENT_STATUS": "Estado Actual",
+  "TABLE_HEADER_CONTAINER_TYPE": "Tipo de Contenedor",
+  "NO_URGENT_TASKS_ASSIGNED": "No hay tareas urgentes asignadas.",
+  "CONTAINER_STATUS_DESC_FULL": "Contenedor lleno",
+  "CONTAINER_STATUS_DESC_DAMAGED": "Contenedor dañado: {description}",
+  "CONTAINER_STATUS_DESC_DAMAGED_NO_DESC": "Contenedor dañado: Sin descripción",
+  "CONTAINER_STATUS_DESC_CRITICAL_FILL": "Contenedor con nivel crítico de llenado",
+  "CONTAINER_STATUS_DESC_NORMAL": "Contenedor en estado normal"
+}

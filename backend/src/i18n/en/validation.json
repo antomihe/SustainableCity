@@ -1,0 +1,16 @@
+{
+  "IS_EMAIL": "Please enter a valid email address.",
+  "IS_STRING": "This field must be a string.",
+  "MIN_LENGTH": "This field must be at least {constraints.0} characters long.",
+  "IS_NOT_EMPTY": "This field cannot be empty.",
+  "IS_UUID": "This field must be a valid UUID.",
+  "IS_ENUM": "This field must be a valid enum value.",
+  "IS_LATITUDE": "Latitude must be a valid latitude value (between -90 and 90).",
+  "IS_LONGITUDE": "Longitude must be a valid longitude value (between -180 and 180).",
+  "LONGITUDE_REQUIRED": "Longitude is required if latitude or radius is provided.",
+  "RADIUS_REQUIRED": "Radius is required if latitude or longitude is provided.",
+  "IS_NUMBER": "This field must be a number.",
+  "RADIUS_MIN": "Radius must be at least {constraints.0} km.",
+  "IS_ARRAY": "This field must be an array.",
+  "IS_UUID_EACH": "Each ID in the array must be a valid UUID."
+}

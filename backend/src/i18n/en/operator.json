@@ -1,0 +1,14 @@
+{
+  "DAILY_TASKS_PDF_TITLE": "Daily Task Plan - {operatorName}",
+  "PDF_DATE_LABEL": "Date: {date}",
+  "TABLE_HEADER_CONTAINER_LOCATION": "Container Location",
+  "TABLE_HEADER_FILL_LEVEL_PERCENT": "Fill Level (%)",
+  "TABLE_HEADER_CURRENT_STATUS": "Current Status",
+  "TABLE_HEADER_CONTAINER_TYPE": "Container Type",
+  "NO_URGENT_TASKS_ASSIGNED": "No urgent tasks assigned.",
+  "CONTAINER_STATUS_DESC_FULL": "Container full",
+  "CONTAINER_STATUS_DESC_DAMAGED": "Container damaged: {description}",
+  "CONTAINER_STATUS_DESC_DAMAGED_NO_DESC": "Container damaged: No description",
+  "CONTAINER_STATUS_DESC_CRITICAL_FILL": "Container at critical fill level",
+  "CONTAINER_STATUS_DESC_NORMAL": "Container in normal state"
+}

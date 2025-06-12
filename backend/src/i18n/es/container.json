@@ -1,0 +1,4 @@
+{
+  "NOT_FOUND": "Contenedor con ID {id} no encontrado.",
+  "NOT_FOUND_MULTIPLE": "Contenedores con IDs {ids} no encontrados."
+}

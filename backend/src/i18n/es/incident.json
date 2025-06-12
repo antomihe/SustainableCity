@@ -1,0 +1,5 @@
+{
+  "INVALID_TYPE": "Tipo de incidente no válido: {type}",
+  "DESCRIPTION_REQUIRED_FOR_NON_FULL": "La descripción es obligatoria para tipos de incidente distintos de 'LLENO'.",
+  "ALREADY_REPORTED": "Ya se ha reportado un incidente para este contenedor."
+}

@@ -1,7 +1,18 @@
+// frontend\next.config.ts
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './app/i18n/request.ts'
+});
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

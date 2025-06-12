@@ -1,0 +1,17 @@
+{
+  "ALREADY_SUBSCRIBED": "Email {email} is already subscribed.",
+  "CONFIRMATION_SUBJECT": "Successful Subscription to {appName}",
+  "CONFIRMATION_BODY_P1": "Thank you for subscribing to sustainability recommendations from {appName}!",
+  "CONFIRMATION_BODY_P2": "You will receive periodic tips to help us keep our campus clean and green.",
+  "TIP_SUBJECT": "Weekly Sustainability Tip - {appName}",
+  "TIP_GREETING": "Hello,",
+  "TIP_INTRO": "Here's your sustainability tip for this week:",
+  "TIP_CLOSING": "Together we can make a more sustainable campus!",
+  "TIPS_LIST": [
+    "Remember to separate your waste correctly: paper, plastic, glass, and organic.",
+    "Reduce the use of single-use plastics. Bring your own water bottle and coffee cup!",
+    "Turn off lights and unplug electronic devices when not in use.",
+    "Participate in campus recycling and clean-up campaigns.",
+    "Learn about collection points for special waste (batteries, electronics)."
+  ]
+}
