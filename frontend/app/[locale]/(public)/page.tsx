@@ -1,11 +1,35 @@
 // frontend\app\[locale]\(public)\page.tsx
-// frontend\app\(public)\page.tsx
 import ContainerMapWrapper from '@/components/custom/map/ContainerMapWrapper';
-import { H2 } from '@/components/ui/typography'; // H1, P no se usan, VideoText tampoco.
+import { H2 } from '@/components/ui/typography'; 
 import { SocketProvider } from '@/contexts/SocketContext';
 import { VelocityScroll } from '@/components/magicui/scroll-based-velocity';
 import { PointerHighlight } from '@/components/ui/pointer-highlight';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  const t = await getTranslations('HomePage');
+
+  return {
+    title: `${t('campusNamePrefix')} ${t('campusNameSuffixSustainable')}`,
+    description: t('subtitle'),
+    authors: [{ name: 'Antonio Miguel Herrero' }],
+    creator: 'Antonio Miguel Herrero',
+    applicationName: `${t('campusNamePrefix')} ${t('campusNameSuffixSustainable')}`,
+    colorScheme: 'light dark',
+    themeColor: [
+      { media: '(prefers-color-scheme: light)', color: '#f0fdf4' }, // light mode
+      { media: '(prefers-color-scheme: dark)', color: '#065f46' }, // dark mode
+    ],
+    keywords: ['campus', 'sustainable', 'green', 'map', 'innovation'],
+    openGraph: {
+      title: `${t('campusNamePrefix')} ${t('campusNameSuffixSustainable')}`,
+      description: t('subtitle'),
+      type: 'website',
+      locale: await getLocale(),
+    },
+  };
+};
 
 export default async function HomePage() {
   const t = await getTranslations('HomePage');
