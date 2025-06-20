@@ -2,7 +2,11 @@
 
 The Smart Waste Management Platform is a sophisticated, real-time application designed for municipalities, businesses, or universities to efficiently manage and monitor smart waste containers. It leverages sensor data and a user-friendly interface to optimize waste collection routes, improve operational efficiency, and enhance citizen engagement.
 
-**Please Note:** This platform is currently operating in **Demo Mode**.
+**See the live Demo here:** 👉 [**sustainablecity.antomihe.es**](https://sustainablecity.antomihe.es) 👈
+
+**Please Note:** This platform is currently operating in **Demo Mode**. Due to hosting constraints for the demo backend, it might go to sleep after periods of inactivity (see [⚠️ Demo Server Sleep Mode Notice](#-demo-server-sleep-mode-notice)).
+
+![SustainableCity](./docs/images/SustainableCity.png)
 
 ## Table of Contents
 
@@ -17,6 +21,7 @@ The Smart Waste Management Platform is a sophisticated, real-time application de
   - [Operator Panel](#operator-panel)
   - [User Registration & Management](#user-registration--management)
 - [🤖 Demo Mode & Data Simulation](#-demo-mode--data-simulation)
+- [⚠️ Demo Server Sleep Mode Notice](#-demo-server-sleep-mode-notice)
 - [🌱 Seed Data & Demo Users](#-seed-data--demo-users)
   - [Pre-loaded Data](#pre-loaded-data)
   - [Demo Login Credentials](#demo-login-credentials)
@@ -24,13 +29,16 @@ The Smart Waste Management Platform is a sophisticated, real-time application de
 - [📂 Project Structure](#-project-structure)
 - [📋 Prerequisites](#-prerequisites)
 - [🚀 Getting Started](#-getting-started)
-  - [⚙️ Backend Setup](#️-backend-setup)
-    - [Option 1: Manual PostgreSQL Setup 🐘](#option-1-manual-postgresql-setup-)
-    - [Option 2: PostgreSQL with Docker Compose 🐳](#option-2-postgresql-with-docker-compose-)
-  - [🖥️ Frontend Setup](#️-frontend-setup)
+  - [🐳 Full Stack Docker Compose (Recommended)](#-full-stack-docker-compose-recommended)
+  - [⚙️ Manual Setup](#️-manual-setup)
+    - [🐘 Manual PostgreSQL Setup](#-manual-postgresql-setup)
+    - [🐳 PostgreSQL with Docker Compose (DB Only - from `/backend`)](#-postgresql-with-docker-compose-db-only---from-backend)
+    - [Backend Manual Run](#backend-manual-run)
+    - [Frontend Manual Run](#frontend-manual-run)
 - [🔑 Environment Variables](#-environment-variables)
 - [▶️ Available Scripts](#️-available-scripts)
 - [📖 API Documentation](#-api-documentation)
+- [📬 Support and Contact](#-support-and-contact)
 - [📜 License](#-license)
 
 ## 🎯 Project Concept
@@ -111,6 +119,22 @@ This platform operates in a **Demo Mode** to showcase its full capabilities with
     -   A random full or damaged container is "serviced" (emptied or repaired) every **4 hours**.
 -   **Purpose:** This simulation allows users to experience the dynamic, real-time nature of the platform, observe status changes on the map, and see how different user roles would interact with live data.
 
+## ⚠️ Demo Server Sleep Mode Notice
+
+**Heads up, navigators! A small note about our DEMO 🛠️😴**
+
+Since this Smart Waste Management Platform Demo is hosted on a free tier to save costs, the server hosting the backend might take a little nap if it hasn't been used for a while.
+
+If you experience slowness, connection errors, or the app not loading after a period of inactivity, it's likely the backend is just waking up! 💤
+
+To wake it up, simply try using the app or accessing an API endpoint. The first request after a nap might take about 50 seconds to respond while the server spins up. Please be patient!
+
+Want to check if it's awake? Try accessing the Swagger documentation URL: `https://api.sustainablecity.antomihe.es/api/docs`.
+*   If you see the technical API documentation page, it's ready for action! ✅
+*   If you see a loading page from the hosting platform (like "Render"), it's stretching. Give it a minute and try again.
+
+Thanks for your understanding! This is just a characteristic of the demo deployment. 😉
+
 ## 🌱 Seed Data & Demo Users
 
 ### Pre-loaded Data
@@ -159,65 +183,110 @@ You can log in and explore the platform's features using these pre-loaded accoun
 - Real-time: `socket.io-client`
 
 ## 📂 Project Structure
--   `/backend`: NestJS application.
+-   `/backend`: NestJS application. Contains a `docker-compose.yml` for *DB only*.
 -   `/frontend`: Next.js application.
+-   `/`: Project root. Contains a `docker-compose.yml` for the *full stack* (DB, Backend, Frontend).
 
 ## 📋 Prerequisites
 -   [Node.js](https://nodejs.org/) (LTS version recommended) 🟢
 -   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) 📦
--   **For Database:**
-    -   Standalone [PostgreSQL](https://www.postgresql.org/download/) server. 🐘
-    -   Or [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) 🐳.
+-   [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) 🐳 (Required for Docker options)
+-   **Optional (for fully manual setup):** Standalone [PostgreSQL](https://www.postgresql.org/download/) server. 🐘
 
 ## 🚀 Getting Started
+
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/antomihe/SustainableCity.git 
-    cd SustainableCity 
+    git clone https://github.com/antomihe/SustainableCity.git
+    cd SustainableCity
     ```
 
-### ⚙️ Backend Setup
-Choose one of the database setup options:
+2.  **Set up Environment Variables:**
+    -   Create `backend/.env` from `backend/.env.example` and configure it. **Ensure database credentials match the Docker Compose file you intend to use (root for full stack, or `/backend` for DB only).**
+    -   Create `frontend/.env.local` from `frontend/.env.local.example` (if it exists, otherwise create it manually) and configure it. At a minimum, set `NEXT_PUBLIC_API_BASE_URL` and `NEXT_PUBLIC_SOCKET_URL` pointing to your backend address (e.g., `http://localhost:3001` if running backend manually or via root Docker Compose, or the backend service name/port if running backend in a different Docker setup).
 
-#### Option 1: Manual PostgreSQL Setup 🐘
-1. Install & run PostgreSQL.
-2. Create a database (e.g., `sustainable_campus` - you might want to rename this in your `.env` to `smart_waste_db` or similar to match the project's theme).
+3.  **Choose Your Setup Method:**
 
-#### Option 2: PostgreSQL with Docker Compose 🐳
-1.  Create `docker-compose.yml` in the project root (or `backend/`):
-2.  Ensure `backend/.env` has matching DB credentials.
-3.  Start container: `docker-compose up -d`. 💨
----
-**Continue common backend setup:**
-1.  `cd backend`
-2.  `npm install`
-3.  Set up `backend/.env` from `.env.example`.
-4.  Database schema syncs via TypeORM (`synchronize: true` in dev).
-5.  `npm run start:dev` (Backend at `http://localhost:3001`) 🎉
+    ### 🐳 Full Stack Docker Compose (Recommended)
+    This is the quickest way to get the entire application stack (Database, Backend, and Frontend) running.
+    1.  Ensure you have Docker and Docker Compose installed (see [Prerequisites](#-prerequisites)).
+    2.  Ensure your `backend/.env` is configured, especially database credentials matching the `docker-compose.yml` file in the project root.
+    3.  From the **project root** directory (`/`):
+        ```bash
+        docker-compose up --build
+        ```
+    4.  This command will build the necessary Docker images and start the database, backend, and frontend containers.
+    5.  Once the containers are healthy, the application should be accessible via your browser, typically at `http://localhost:3000` (or the port specified for the frontend service in the root `docker-compose.yml`). 🎉
 
-### 🖥️ Frontend Setup
-1.  `cd ../frontend`
-2.  `npm install`
-3.  Create `frontend/.env.local`:
-    ```env
-    NEXT_PUBLIC_API_BASE_URL=http://localhost:3001/api
-    NEXT_PUBLIC_SOCKET_URL=http://localhost:3001
-    ```
-4.  `npm run dev` (Frontend at `http://localhost:3000`) 🎈
+    ### ⚙️ Manual Setup
+    Follow these steps if you prefer to run one or more components directly on your host machine.
+
+    #### 🐘 Manual PostgreSQL Setup
+    1.  Install & run a standalone PostgreSQL server.
+    2.  Create a database (e.g., `smart_waste_db`).
+    3.  Configure your `backend/.env` with the connection details for this database.
+
+    #### 🐳 PostgreSQL with Docker Compose (DB Only - from `/backend`)
+    Use the Docker Compose file located specifically within the `/backend` directory to run *only* the PostgreSQL database in a container.
+    1.  Navigate to the backend directory: `cd backend`
+    2.  Ensure `backend/.env` has matching DB credentials for the `docker-compose.yml` file inside this directory.
+    3.  Start the database container:
+        ```bash
+        docker-compose up -d
+        ```
+    4.  The database should now be running in a container, accessible by the backend running on your host.
+
+    #### Backend Manual Run
+    *Requires either a [Manual PostgreSQL Setup](#-manual-postgresql-setup) or [PostgreSQL with Docker Compose (DB Only - from `/backend`)](#-postgresql-with-docker-compose-db-only---from-backend) to be completed first.*
+    1.  Navigate to the backend directory: `cd backend`
+    2.  Install dependencies: `npm install`
+    3.  Ensure your `backend/.env` is correctly configured to connect to your database. Database schema syncs via TypeORM (`synchronize: true` in dev, or run migrations). Seed data will be loaded if `npm run seed` is configured to run or if it's part of the dev startup.
+    4.  Start the backend server:
+        ```bash
+        npm run start:dev
+        ```
+    5.  The backend should now be running at `http://localhost:3001` (or the port configured).
+
+    #### Frontend Manual Run
+    *Requires the [Backend Manual Run](#backend-manual-run) or the backend service from the [Full Stack Docker Compose](#-full-stack-docker-compose-recommended) to be running and accessible.*
+    1.  Navigate to the frontend directory: `cd frontend`
+    2.  Install dependencies: `npm install`
+    3.  Ensure your `frontend/.env.local` is correctly configured, pointing `NEXT_PUBLIC_API_BASE_URL` and `NEXT_PUBLIC_SOCKET_URL` to your running backend instance (e.g., `http://localhost:3001`).
+    4.  Start the frontend development server:
+        ```bash
+        npm run dev
+        ```
+    5.  The frontend should now be running at `http://localhost:3000` (or the configured Next.js port). 🎈
 
 ## 🔑 Environment Variables
-Refer to `backend/.env.example` and ensure your `backend/.env` is correctly configured, especially `DB_*` , `JWT_SECRET`, and `EMAIL_*` variables. For the frontend, check the `NEXT_PUBLIC_*` variables mentioned above.
+Refer to `backend/.env.example` and ensure your `backend/.env` is correctly configured, especially `DB_*` , `JWT_SECRET`, and `EMAIL_*` variables. For the frontend, check the `NEXT_PUBLIC_*` variables mentioned in the [Frontend Manual Run](#frontend-manual-run) step. Database credentials in `backend/.env` must match the credentials expected by the database setup method you choose (manual or either Docker Compose file).
 
 ## ▶️ Available Scripts
 (Refer to `package.json` in `backend/` and `frontend/` folders for full list)
-- **Backend:** `npm run start:dev`, `npm run build`, `npm run seed`
-- **Frontend:** `npm run dev`, `npm run build`
+-   **From Project Root (`/`)**:
+    -   `docker-compose up --build`: Builds and runs the full stack (DB, Backend, Frontend).
+-   **From Backend Directory (`/backend`)**:
+    -   `docker-compose up -d` (if `docker-compose.yml` exists): Starts the DB container only (for manual backend run).
+    -   `npm install`: Installs backend dependencies.
+    -   `npm run start:dev`: Starts the backend server in development mode (requires DB).
+    -   `npm run build`: Builds the backend for production.
+    -   `npm run seed`: Runs the database seeder script.
+-   **From Frontend Directory (`/frontend`)**:
+    -   `npm install`: Installs frontend dependencies.
+    -   `npm run dev`: Starts the frontend development server (requires backend).
+    -   `npm run build`: Builds the frontend for production.
 
 ## 📖 API Documentation
-Swagger API docs at: `http://localhost:[APP_PORT]/[API_PREFIX]-docs` (e.g., `http://localhost:3001/api-docs`).
+Swagger API docs available when the backend is running at: `http://localhost:[BACKEND_PORT]/[API_PREFIX]-docs` (e.g., `http://localhost:3001/api-docs`).
+The API documentation for the **deployed demo** is available here: [**api.sustainablecity.antomihe.es/api/docs**](https://api.sustainablecity.antomihe.es/api/docs).
+
+## 📬 Support and Contact
+If you have any questions, suggestions, or want to report an issue, you can contact me at: [contacto@antomihe.es](mailto:contacto@antomihe.es)
 
 ## 📜 License
 
 Copyright © 2025 Antonio Miguel Herrero. All rights reserved.
 
----
+This project and all of its content are protected by copyright. Any reproduction, distribution, modification, or unauthorized use is strictly prohibited without the express written permission of the copyright holder.
+
+For any inquiries or permission requests, please contact: [contacto@antomihe.es](mailto:contacto@antomihe.es)
